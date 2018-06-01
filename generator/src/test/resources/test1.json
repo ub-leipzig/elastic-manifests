@@ -1,0 +1,1036 @@
+{
+  "took": 13,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 51,
+    "max_score": 15.762412,
+    "hits": [
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "db893d3d-e0f4-440b-9a96-de53c2dacb2c",
+        "_score": 15.762412,
+        "_source": {
+          "imageIndex": 39542,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Theologische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "9ed77e68-b402-40d1-b5ca-2d7fa939a1d8",
+        "_score": 15.762412,
+        "_source": {
+          "imageIndex": 39550,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "7822eb4e-3f5c-4ed6-b889-e1d20b71ea15",
+        "_score": 15.762412,
+        "_source": {
+          "imageIndex": 39553,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "80724649-c786-4b29-a416-202f6305a617",
+        "_score": 15.762412,
+        "_source": {
+          "imageIndex": 39555,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "da08e5cf-4825-4b00-a775-8819beed5a59",
+        "_score": 15.762412,
+        "_source": {
+          "imageIndex": 39561,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "e9036919-21f4-4d50-802a-e4a26853cc33",
+        "_score": 15.762412,
+        "_source": {
+          "imageIndex": 39568,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "e4b9c0ce-8dfb-4ee8-89ff-d1baa168a0a9",
+        "_score": 15.762412,
+        "_source": {
+          "imageIndex": 39589,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "4fd961af-e5d2-4475-8d76-b13f7cdfbfcf",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39545,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Juristische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "1133b6bf-63d9-4c1f-9894-541796e853f5",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39557,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Veterinärmedizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "dc953a9b-53c9-44f6-b6e8-2ded247435c1",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39563,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "a8dd868a-b7c9-480e-8b4c-8f7e6dee3a89",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39569,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "5b0b2a60-1cf3-46a6-b077-234b7a47308d",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39573,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "07f98ff2-e643-4ddc-a3fa-d68edb308e8d",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39575,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "45daf698-cb63-4071-be07-fada88d2f5c2",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39576,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "c9a258dc-7d52-4866-8a85-e331dbd1f4c5",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39581,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "bb3224dc-af02-4511-9147-53226e029442",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39584,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "bc9e042f-f570-477e-b461-60f792071a3f",
+        "_score": 15.09367,
+        "_source": {
+          "imageIndex": 39592,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "aafeca25-8365-4eb2-8ac9-85356098be92",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39547,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Juristische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "f61dd424-5738-4ad1-87e3-aaa125a6167b",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39549,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "13d5cf9d-8ebf-45f9-8b73-ead84bd68a48",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39551,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "197aecea-9c41-49e2-97f3-5c97fab96316",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39556,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Veterinärmedizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "41511352-3257-4c68-8ebf-df928e9618b9",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39562,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "90fba32b-f8d5-4f1b-b638-92fbcc15ba94",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39571,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "156c6c10-7d34-4937-8c14-4230b7232560",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39572,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "a922348e-5a6e-4533-afe2-ff545c706560",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39574,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "bb509a07-96e5-469d-abd5-c12eef3ca071",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39577,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "b84228d5-7387-41bb-9dd7-51fe53d19bb4",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39585,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "81cdf41a-a520-475c-89f2-98bd682e6d8c",
+        "_score": 14.84485,
+        "_source": {
+          "imageIndex": 39588,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "b6f2159d-a9ee-4be5-90ee-cd60331c62bf",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39543,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Theologische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "e59d6453-c120-40b3-b11d-5d04fb315c1c",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39544,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Juristische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "d4bb7ad6-9197-42ab-9d08-b3cfd0b5cd3b",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39552,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "f87377f2-7569-4740-ab15-645fe4bff9bc",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39558,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Veterinärmedizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "41fe5308-6b95-4b16-bd08-1feb2a125645",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39559,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "3a27f06f-e380-428d-bc84-5ef102e3e81a",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39565,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "3d5ea383-4010-411d-8d3a-8d97072a42aa",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39567,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "bc9330cc-17ae-4814-9858-ea4b7f0fe512",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39580,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "be6e2beb-8c11-4c7c-867b-ab8d6122603e",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39583,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "079272d4-f775-494b-8549-429625a87031",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39587,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "ff6c24da-0f98-420e-8200-06add7ee8dd3",
+        "_score": 14.822128,
+        "_source": {
+          "imageIndex": 39590,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "9376bb5e-1bf1-43bd-998e-96b77fd1c0ea",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39546,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Juristische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "7886e790-667d-4fb0-89d9-db7dead656ba",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39548,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "78963359-7018-47d3-becd-c8ba3b7ad845",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39554,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Medizinische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "38beddcc-d9d5-4a6b-a249-6c07164fbdd7",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39560,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "e777e514-d128-4355-8146-907f22e5d601",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39564,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "e310f636-db10-4ae9-9637-6268c0a59475",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39566,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "1fd86f12-39f8-4516-a654-44cb01af6ea8",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39570,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "a4de6257-0a3e-4f80-b820-6a0d6288ecf1",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39578,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "54be82df-cfb9-4859-957b-8513d56b68b2",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39579,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "7e39e126-4c37-46f8-8ab9-730413195491",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39582,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "85b30b93-5b1b-4a95-8826-46b5f891d969",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39586,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "0ebb2d1f-187c-4b1d-8559-7e6407f73c1f",
+        "_score": 14.753474,
+        "_source": {
+          "imageIndex": 39591,
+          "imageServiceIRI": null,
+          "metadataMap": {
+            "tag1": "Personal- und Vorlesungsverzeichnisse 1935 - 1975",
+            "tag2": "1935 - 1951",
+            "tag3": "1935",
+            "tag4": "1936",
+            "tag5": "Winterhalbjahr-Sommerhalbjahr",
+            "tag6": "Vorlesungen SS 1936",
+            "tag7": "Philosophische Fakultät",
+            "tag8": ""
+          }
+        }
+      }
+    ]
+  }
+}

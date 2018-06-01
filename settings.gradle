@@ -1,0 +1,6 @@
+rootProject.name = 'elastic-manifests'
+include ':generator'
+include ':templates'
+
+project(':generator').projectDir = "$rootDir/generator" as File
+project(':templates').projectDir = "$rootDir/templates" as File

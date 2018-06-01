@@ -1,0 +1,216 @@
+{
+  "took": 29,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 11,
+    "max_score": 8.839084,
+    "hits": [
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "085256e2-b924-4127-906b-72d53633d0d5",
+        "_score": 8.839084,
+        "_source": {
+          "imageIndex": 16,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/e06887f7-48ed-50a4-bdb9-3dd1a08a5165",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "5129157c-4eb5-43d9-ad12-b70a92d41bf5",
+        "_score": 8.359276,
+        "_source": {
+          "imageIndex": 10,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/c5351e40-7e22-591f-9ee3-2d1a607c37e5",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "64891c9b-7c69-4d23-85ed-e96f7e6c8ab3",
+        "_score": 8.359276,
+        "_source": {
+          "imageIndex": 12,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/20153329-77e5-5cee-912c-91ddc918505f",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "f8c01a54-1ce8-4bb1-b3fc-a5b50d113f10",
+        "_score": 8.335383,
+        "_source": {
+          "imageIndex": 13,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/02ac36e8-bae9-5450-b790-280574d399ac",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "be53f756-06c1-437a-8922-c76153b0c04d",
+        "_score": 8.335383,
+        "_source": {
+          "imageIndex": 14,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/8411182d-0fb1-5445-bdc9-5606dff78625",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "6cfda7ef-0455-48ca-b78b-975312f2026d",
+        "_score": 8.331153,
+        "_source": {
+          "imageIndex": 11,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/47f67029-3bc8-515e-9c7c-ed49d612e07a",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "515b33df-f28a-42c0-a6bf-b8e1b8e986d9",
+        "_score": 8.331153,
+        "_source": {
+          "imageIndex": 15,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/1963616e-6338-5fa3-a8a1-12d809bcf38d",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "c754bdc6-bf7e-4e3f-9b81-b55905ccfbd3",
+        "_score": 7.993234,
+        "_source": {
+          "imageIndex": 17,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/5e491057-857c-57c7-802f-4f4d0b29739d",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "db91bce1-f995-43d0-b53f-d9c16277e081",
+        "_score": 7.993234,
+        "_source": {
+          "imageIndex": 18,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/c3cf41fa-301e-56a0-8b4a-6d7fc020d944",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      },
+      {
+        "_index": "vp4",
+        "_type": "_doc",
+        "_id": "fe5394be-b670-48c1-ac4a-af62501913bf",
+        "_score": 7.993234,
+        "_source": {
+          "imageIndex": 19,
+          "imageServiceIRI": "http://workspaces.ub.uni-leipzig.de:8182/iiif/2/f1edbe1a-5a57-5279-91cf-6cfa4223137a",
+          "metadataMap": {
+            "tag1": "Programmata, Ankündigungen 1641 - 1680, 1728, 1730, 1733, 1777",
+            "tag2": "1641 - 1680",
+            "tag3": "1642",
+            "tag4": "",
+            "tag5": "",
+            "tag6": "",
+            "tag7": "",
+            "tag8": ""
+          }
+        }
+      }
+    ]
+  }
+}

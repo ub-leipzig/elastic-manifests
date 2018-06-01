@@ -1,0 +1,9 @@
+dependencies {
+    implementation project(":templates")
+    implementation("de.ubleipzig:iiif.vocabulary:$iiifVocabularyVersion")
+    implementation("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion") {force = true}
+    implementation("com.fasterxml.jackson.core:jackson-core:$jacksonVersion") {force = true}
+    implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion") {force = true}
+    implementation("org.slf4j:slf4j-api:$slf4jVersion")
+
+}
