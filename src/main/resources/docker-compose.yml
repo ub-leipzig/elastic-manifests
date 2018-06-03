@@ -45,10 +45,21 @@ services:
     networks:
       - esnet
     restart: always
+  redis:
+    image: ubleipzig/redis:latest
+    container_name: redis
+    ports:
+      - 6379:6379
+    networks:
+      - esnet
+    volumes:
+      - redis-data-volume:/data
 volumes:
   esdata1:
     driver: local
   esdata2:
+    driver: local
+  redis-data-volume:
     driver: local
 
 networks:

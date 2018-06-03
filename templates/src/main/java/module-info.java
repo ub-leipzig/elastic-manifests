@@ -14,5 +14,6 @@
 module de.ubleipzig.elastic.manifests.templates {
     requires com.fasterxml.jackson.annotation;
     requires de.ubleipzig.iiif.vocabulary;
+    opens de.ubleipzig.elastic.manifests.templates to com.fasterxml.jackson.databind;
     exports de.ubleipzig.elastic.manifests.templates;
 }

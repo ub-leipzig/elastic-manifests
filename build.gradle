@@ -84,7 +84,7 @@ subprojects {
         tasks.withType(JavaCompile) {
             options.compilerArgs.add("-Xlint:unchecked")
             options.compilerArgs.add("-Xlint:deprecation")
-            options.compilerArgs.addAll(["--add-modules", "jdk.incubator.httpclient", "--add-modules", "java.xml.bind", "--add-modules", "java.naming"])
+            options.compilerArgs.addAll(["--add-modules", "jdk.incubator.httpclient", "--add-modules", "java.xml.bind", "--add-modules", "java.naming", "--add-modules", "java.sql"])
         }
     }
 

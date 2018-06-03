@@ -139,60 +139,63 @@ public class ManifestBuilder extends AbstractSerializer {
         final ElasticResponse response = deserializer.mapElasticResponse(body);
         final List<Hits> hits = response.getHits().getHits();
         final List<Canvas> canvases = new ArrayList<>();
-        final List<Metadata> md = buildMetadataFromFirstHit(hits.get(0).getSource().getMetadataMap());
-        hits.forEach(h -> {
-            final Integer index = h.getSource().getImageIndex();
-            final String imageService = h.getSource().getImageServiceIRI();
+        if (!hits.isEmpty()) {
+            final List<Metadata> md = buildMetadataFromFirstHit(hits.get(0).getSource().getMetadataMap());
+            hits.forEach(h -> {
+                final Integer index = h.getSource().getImageIndex();
+                final String imageService = h.getSource().getImageServiceIRI();
 
-            //getDimensionsFromImageService
-            InputStream is = null;
-            try {
-                is = new URL(imageService).openStream();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            final ImageServiceResponse ir = deserializer.mapServiceResponse(is);
-            final Integer height = ir.getHeight();
-            final Integer width = ir.getWidth();
+                //getDimensionsFromImageService
+                InputStream is = null;
+                try {
+                    is = new URL(imageService).openStream();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                final ImageServiceResponse ir = deserializer.mapServiceResponse(is);
+                final Integer height = ir.getHeight();
+                final Integer width = ir.getWidth();
 
-            //createServiceObject
-            final Service service = new Service();
-            service.setContext(IIIFEnum.IMAGE_CONTEXT.IRIString());
-            service.setProfile(IIIFEnum.SERVICE_PROFILE.IRIString());
-            service.setId(imageService);
+                //createServiceObject
+                final Service service = new Service();
+                service.setContext(IIIFEnum.IMAGE_CONTEXT.IRIString());
+                service.setProfile(IIIFEnum.SERVICE_PROFILE.IRIString());
+                service.setId(imageService);
 
-            //createBody
-            final Body body = new Body();
-            body.setService(service);
-            body.setResourceHeight(height);
-            body.setResourceWidth(width);
-            body.setResourceType("dctypes:Image");
-            body.setResourceFormat("image/jpeg");
-            body.setResourceId(trellisBodyBase + index + ".jpg");
+                //createBody
+                final Body body = new Body();
+                body.setService(service);
+                body.setResourceHeight(height);
+                body.setResourceWidth(width);
+                body.setResourceType("dctypes:Image");
+                body.setResourceFormat("image/jpeg");
+                body.setResourceId(trellisBodyBase + index + ".jpg");
 
-            //createAnnotation
-            final List<PaintingAnnotation> annotations = new ArrayList<>();
-            final PaintingAnnotation anno = new PaintingAnnotation();
-            final String annoId = trellisAnnotationBase + UUID.randomUUID();
-            anno.setId(annoId);
-            anno.setBody(body);
-            anno.setTarget(trellisTargetBase + index.toString());
-            annotations.add(anno);
+                //createAnnotation
+                final List<PaintingAnnotation> annotations = new ArrayList<>();
+                final PaintingAnnotation anno = new PaintingAnnotation();
+                final String annoId = trellisAnnotationBase + UUID.randomUUID();
+                anno.setId(annoId);
+                anno.setBody(body);
+                anno.setTarget(trellisTargetBase + index.toString());
+                annotations.add(anno);
 
-            //createCanvas
-            final Canvas canvas = new Canvas();
-            canvas.setId(trellisTargetBase + index.toString());
-            canvas.setHeight(height);
-            canvas.setWidth(width);
-            canvas.setImages(annotations);
-            canvas.setLabel(String.format("%08d", index));
-            canvases.add(canvas);
-        });
-        canvases.sort(Comparator.comparing(Canvas::getLabel));
-        final List<Sequence> sequences = getSequence(canvases);
-        final Manifest manifest = getManifest(sequences, md);
-        final Optional<String> json = serialize(manifest);
-        return json.orElse(null);
+                //createCanvas
+                final Canvas canvas = new Canvas();
+                canvas.setId(trellisTargetBase + index.toString());
+                canvas.setHeight(height);
+                canvas.setWidth(width);
+                canvas.setImages(annotations);
+                canvas.setLabel(String.format("%08d", index));
+                canvases.add(canvas);
+            });
+            canvases.sort(Comparator.comparing(Canvas::getLabel));
+            final List<Sequence> sequences = getSequence(canvases);
+            final Manifest manifest = getManifest(sequences, md);
+            final Optional<String> json = serialize(manifest);
+            return json.orElse(null);
+        } else {
+            throw new RuntimeException("no hits for query, manifest builder process stopped");
+        }
     }
-
 }

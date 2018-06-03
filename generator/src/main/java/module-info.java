@@ -12,6 +12,7 @@
  * limitations under the License.
  */
 module de.ubleipzig.elastic.manifests.generator {
+    exports de.ubleipzig.elastic.manifests.generator;
     requires com.fasterxml.jackson.annotation;
     requires de.ubleipzig.elastic.manifests.templates;
     requires com.fasterxml.jackson.core;
@@ -19,5 +20,7 @@ module de.ubleipzig.elastic.manifests.generator {
     requires de.ubleipzig.iiif.vocabulary;
     requires java.naming;
     requires camel.core;
+    requires spring.data.redis;
+    requires slf4j.api;
 
 }

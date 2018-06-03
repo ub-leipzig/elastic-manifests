@@ -11,7 +11,186 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package de.ubleipzig.elastic.manifests.generator;
 
+import static de.ubleipzig.elastic.manifests.generator.ContextUtils.createInitialContext;
+import static org.apache.camel.Exchange.CONTENT_TYPE;
+import static org.apache.camel.Exchange.HTTP_CHARACTER_ENCODING;
+import static org.apache.camel.Exchange.HTTP_METHOD;
+import static org.apache.camel.Exchange.HTTP_RESPONSE_CODE;
+import static org.apache.camel.LoggingLevel.INFO;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.Objects;
+
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.impl.JndiRegistry;
+import org.apache.camel.main.Main;
+import org.apache.camel.main.MainListenerSupport;
+import org.apache.camel.main.MainSupport;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+/**
+ * Generator.
+ *
+ * @author christopher-johnson
+ */
 public class Generator {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Generator.class);
+    private static final JedisConnectionFactory CONNECTION_FACTORY = new JedisConnectionFactory();
+    private static RedisTemplate<String, String> redisTemplate;
+    private static final String HTTP_ACCEPT = "Accept";
+    private static final String QUERY = "q";
+    private static final String EMPTY = "empty";
+    private static final String contentTypeJson = "application/json";
+    static {
+        CONNECTION_FACTORY.setHostName("localhost");
+        CONNECTION_FACTORY.setPort(6379);
+        CONNECTION_FACTORY.afterPropertiesSet();
+    }
+
+    /**
+     * @param args String[]
+     * @throws Exception Exception
+     */
+    public static void main(final String[] args) throws Exception {
+        final Generator generator = new Generator();
+        generator.init();
+    }
+
+    /**
+     * @throws Exception Exception
+     */
+    private void init() throws Exception {
+        final Main main = new Main();
+        main.addRouteBuilder(new QueryRoute());
+        main.addMainListener(new Events());
+        final JndiRegistry registry = new JndiRegistry(createInitialContext());
+        redisTemplate = new RedisTemplate<>();
+        redisTemplate.setConnectionFactory(CONNECTION_FACTORY);
+        redisTemplate.setDefaultSerializer(new StringRedisSerializer());
+        redisTemplate.afterPropertiesSet();
+        Objects.requireNonNull(registry)
+                .bind("redisTemplate", redisTemplate);
+        //main.setPropertyPlaceholderLocations("file:${env:DYNAMO_HOME}/de.ubleipzig.dynamo.cfg");
+        main.setPropertyPlaceholderLocations("classpath:de.ubleipzig.elastic.manifests.generator.cfg");
+        main.run();
+    }
+
+    /**
+     * Events.
+     */
+    public static class Events extends MainListenerSupport {
+
+        @Override
+        public void afterStart(final MainSupport main) {
+            System.out.println("Generator is now started!");
+        }
+
+        @Override
+        public void beforeStop(final MainSupport main) {
+            System.out.println("Generator is now being stopped!");
+        }
+    }
+
+    /**
+     * QueryRoute.
+     */
+    public static class QueryRoute extends RouteBuilder {
+        /**
+         * configure.
+         */
+        public void configure() {
+            from("jetty:http://{{api.host}}:{{api.port}}{{api.prefix}}?"
+                    + "optionsEnabled=true&matchOnUriPrefix=true&sendServerVersion=false"
+                    + "&httpMethodRestrict=GET,POST,OPTIONS")
+                    .routeId("Generator")
+                    .removeHeaders(HTTP_ACCEPT)
+                    .setHeader("Access-Control-Allow-Origin")
+                    .constant("*")
+                    .choice()
+                    .when(header(HTTP_METHOD).isEqualTo("POST"))
+                    .to("direct:postQuery")
+                    .when(header(HTTP_METHOD).isEqualTo("GET"))
+                    .to("direct:redis-get");
+            from("direct:redis-get").routeId("RedisGet")
+                    .process(e -> {
+                        final String httpquery = e.getIn()
+                                .getHeader(QUERY)
+                                .toString();
+                        if (redisTemplate.opsForValue().get(httpquery) != null) {
+                            e.getIn().setBody(redisTemplate.opsForValue().get(httpquery));
+                            LOGGER.info("Getting query result from Redis Cache");
+                        } else {
+                            e.getIn().setHeader(CONTENT_TYPE, EMPTY);
+                        }
+                    })
+                    .choice()
+                    .when(header(CONTENT_TYPE).isEqualTo(EMPTY))
+                    .to("direct:getQuery");
+            from("direct:postQuery").routeId("postQuery")
+                    .log(INFO, LOGGER, "Posting Query to Elastic Search API")
+                    .convertBodyTo(String.class)
+                    .setHeader(HTTP_METHOD)
+                    .constant("POST")
+                    .setHeader(CONTENT_TYPE)
+                    .constant(contentTypeJson)
+                    .process(e -> e.getIn().setBody(e.getIn().getBody()))
+                    .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
+                    .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
+                    .setHeader(CONTENT_TYPE)
+                    .constant(contentTypeJson)
+                    .convertBodyTo(String.class)
+                    .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
+                    .to("direct:buildManifest");
+            from("direct:getQuery").routeId("getQuery")
+                    .log(INFO, LOGGER, "Get Query from Elastic Search API")
+                    .process(e -> {
+                        final String query = e.getIn().getHeader(QUERY).toString();
+                        e.getIn().setBody(query);
+                    })
+                    .removeHeaders("Camel*")
+                    .setHeader(HTTP_METHOD)
+                    .constant("POST")
+                    .setHeader(CONTENT_TYPE)
+                    .constant(contentTypeJson)
+                    .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
+                    .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
+                    .setHeader(CONTENT_TYPE)
+                    .constant(contentTypeJson)
+                    .convertBodyTo(String.class)
+                    .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
+                    .to("direct:buildManifest");
+            from("direct:buildManifest").routeId("ManifestBuilder")
+                    .setHeader(HTTP_CHARACTER_ENCODING)
+                    .constant("UTF-8")
+                    .setHeader(CONTENT_TYPE)
+                    .constant(contentTypeJson)
+                    .log(INFO, LOGGER, "Building Manifest")
+                    .process(e -> {
+                        final String jsonResults = e.getIn().getBody().toString();
+                        final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
+                        final ManifestBuilder builder = new ManifestBuilder(is);
+                        e.getIn().setBody(builder.build());
+                    })
+                    .to("direct:redis-put");
+            from("direct:redis-put").routeId("RedisPut")
+                    .log(INFO, LOGGER, "Storing query result in Redis Cache")
+                    .process(e -> {
+                        final String httpquery = e.getIn().getHeader(QUERY).toString();
+                        final String body = e.getIn().getBody().toString();
+                        if (null == redisTemplate.opsForValue().get(httpquery)) {
+                            redisTemplate.opsForValue().set(httpquery, body);
+                        }
+                        e.getIn().setBody(redisTemplate.opsForValue().get(httpquery));
+                    });
+        }
+    }
 }

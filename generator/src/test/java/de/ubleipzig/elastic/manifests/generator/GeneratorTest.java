@@ -23,6 +23,7 @@ import static org.apache.camel.LoggingLevel.INFO;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Objects;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
@@ -31,12 +32,29 @@ import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.impl.JndiRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 public final class GeneratorTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GeneratorTest.class);
     private static final String HTTP_ACCEPT = "Accept";
     private static final String QUERY = "q";
+    private static final String EMPTY = "empty";
+
+    private static final JedisConnectionFactory CONNECTION_FACTORY = new JedisConnectionFactory();
+    private static RedisTemplate<String, String> redisTemplate;
+
+    static {
+        CONNECTION_FACTORY.setHostName("localhost");
+        CONNECTION_FACTORY.setPort(6379);
+        CONNECTION_FACTORY.afterPropertiesSet();
+        redisTemplate = new RedisTemplate<>();
+        redisTemplate.setConnectionFactory(CONNECTION_FACTORY);
+        redisTemplate.setDefaultSerializer(new StringRedisSerializer());
+        redisTemplate.afterPropertiesSet();
+    }
 
     private GeneratorTest() {
     }
@@ -44,6 +62,7 @@ public final class GeneratorTest {
     public static void main(final String[] args) throws Exception {
         LOGGER.info("About to run GeneratorTest API...");
         final JndiRegistry registry = new JndiRegistry(createInitialContext());
+        Objects.requireNonNull(registry).bind("redisTemplate", redisTemplate);
         final CamelContext camelContext = new DefaultCamelContext(registry);
 
         camelContext.addRoutes(new RouteBuilder() {
@@ -62,6 +81,21 @@ public final class GeneratorTest {
                         .when(header(HTTP_METHOD).isEqualTo("POST"))
                         .to("direct:postQuery")
                         .when(header(HTTP_METHOD).isEqualTo("GET"))
+                        .to("direct:redis-get");
+                from("direct:redis-get")
+                        .routeId("RedisGet")
+                        .log(INFO, LOGGER, "${headers}")
+                        .process(e -> {
+                            final String httpquery = e.getIn().getHeader(QUERY).toString();
+                            if (redisTemplate.opsForValue().get(httpquery) != null) {
+                                e.getIn().setBody(redisTemplate.opsForValue().get(httpquery));
+                                LOGGER.info("Getting query result from Redis Cache");
+                            } else {
+                                e.getIn().setHeader(CONTENT_TYPE, EMPTY);
+                            }
+                        })
+                        .choice()
+                        .when(header(CONTENT_TYPE).isEqualTo(EMPTY))
                         .to("direct:getQuery");
                 from("direct:postQuery")
                         .routeId("postQuery")
@@ -109,6 +143,18 @@ public final class GeneratorTest {
                             final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
                             final ManifestBuilder builder = new ManifestBuilder(is);
                             e.getIn().setBody(builder.build());
+                        })
+                        .to("direct:redis-put");
+                from("direct:redis-put")
+                        .routeId("RedisPut")
+                        .log(INFO, LOGGER, "Storing query result in Redis Cache")
+                        .process(e -> {
+                            final String httpquery = e.getIn().getHeader(QUERY).toString();
+                            final String body = e.getIn().getBody().toString();
+                            if (null == redisTemplate.opsForValue().get(httpquery)) {
+                                redisTemplate.opsForValue().set(httpquery, body);
+                            }
+                            e.getIn().setBody(redisTemplate.opsForValue().get(httpquery));
                         });
             }
         });

@@ -35,6 +35,7 @@ dependencies {
     implementation("javax.activation:javax.activation-api:$activationApiVersion")
     implementation("org.apache.camel:camel-jetty9:$camelVersion")
     implementation("org.apache.camel:camel-http4:$camelVersion")
+    implementation("org.apache.camel:camel-spring-redis:$camelVersion")
 
-    testImplementation("ch.qos.logback:logback-classic:$logbackVersion")
+    implementation("ch.qos.logback:logback-classic:$logbackVersion")
 }
