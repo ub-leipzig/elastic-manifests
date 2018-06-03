@@ -11,29 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.ubleipzig.elastic.manifests.templates;
+package de.ubleipzig.elastic.manifests.generator;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-public class Query {
-    @JsonProperty
-    private MultiMatch multi_match;
-
-    /**
-     *
-     * @return MultiMatch
-     */
-    @JsonIgnore
-    public MultiMatch getMultiMatch() {
-        return multi_match;
-    }
-
-    /**
-     *
-     * @param multi_match MultiMatch
-     */
-    public void setMultiMatch(final MultiMatch multi_match) {
-        this.multi_match = multi_match;
-    }
+public class Generator {
 }

@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CrossFieldQuery {
     @JsonProperty
-    private Query query;
+    public Query query;
 
     @JsonProperty
     private Integer size;
@@ -30,13 +30,15 @@ public class CrossFieldQuery {
         this.size = size;
     }
 
-    /**
-     *
-     * @param query Query
-     */
-    public void setQuery(final Query query) {
-        this.query = query;
+    public class Query {
+        public MultiMatch multi_match;
+
+        public class MultiMatch {
+            public String query;
+
+            public String type = "cross_fields";
+
+            public String operator = "and";
+        }
     }
-
-
 }

@@ -1,3 +1,25 @@
+apply plugin: 'application'
+
+mainClassName = 'de.ubleipzig.elastic.manifests.generator.Generator'
+description = 'A Camel service that assembles manifests from Elastic Search queries'
+
+javaModule {
+    name = 'de.ubleipzig.elastic.manifests.generator'
+    extraTestModules = ['jdk.incubator.httpclient', 'org.apache.commons.rdf.jena']
+}
+
+configurations {
+    all {
+        exclude(group: 'commons-logging', module: 'commons-logging')
+        exclude(group: 'org.apache.camel', module: 'camel-core-osgi')
+        exclude group: 'com.sun.xml.bind', module: 'jaxb-core'
+        exclude group: 'com.sun.xml.bind', module: 'jaxb-impl'
+        exclude group: 'javax.inject', module: 'javax.inject'
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient-osgi'
+        exclude group: 'org.apache.httpcomponents', module: 'httpcore-osgi'
+    }
+}
+
 javaModule {
     extraTestModules = ['jdk.incubator.httpclient', 'org.apache.commons.rdf.jena']
 }
@@ -10,4 +32,9 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion") {force = true}
     implementation("org.slf4j:slf4j-api:$slf4jVersion")
     implementation("org.trellisldp:trellis-client:$trellisClientVersion")
+    implementation("javax.activation:javax.activation-api:$activationApiVersion")
+    implementation("org.apache.camel:camel-jetty9:$camelVersion")
+    implementation("org.apache.camel:camel-http4:$camelVersion")
+
+    testImplementation("ch.qos.logback:logback-classic:$logbackVersion")
 }

@@ -22,8 +22,6 @@ import de.ubleipzig.elastic.manifests.generator.ManifestBuilder;
 import de.ubleipzig.elastic.manifests.templates.CrossFieldQuery;
 import de.ubleipzig.elastic.manifests.templates.ElasticHits;
 import de.ubleipzig.elastic.manifests.templates.ElasticResponse;
-import de.ubleipzig.elastic.manifests.templates.MultiMatch;
-import de.ubleipzig.elastic.manifests.templates.Query;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -35,6 +33,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.apache.commons.rdf.jena.JenaRDF;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import jdk.incubator.http.HttpClient;
@@ -44,7 +43,7 @@ import jdk.incubator.http.HttpResponse;
 public class MapElasticResponseTest {
     static final JenaRDF rdf = new JenaRDF();
 
-    static HttpClient getClient() {
+    private static HttpClient getClient() {
         final ExecutorService exec = Executors.newCachedThreadPool();
         return HttpClient.newBuilder().executor(exec).build();
     }
@@ -67,13 +66,12 @@ public class MapElasticResponseTest {
 
     @Test
     void generateManifestFromCrossFieldResponse() throws URISyntaxException, IOException, InterruptedException {
-        final MultiMatch multi = new MultiMatch();
-        multi.setQuery("1799 Sommerhalbjahr");
-        final Query query = new Query();
-        query.setMultiMatch(multi);
         final CrossFieldQuery cfq = new CrossFieldQuery();
         cfq.setSize(100);
-        cfq.setQuery(query);
+        cfq.query = cfq.new Query();
+        cfq.query.multi_match = cfq.query.new MultiMatch();
+        cfq.query.multi_match.query = "1799 Sommerhalbjahr";
+
         final Optional<String> json = serialize(cfq);
         if (json.isPresent()) {
             final InputStream is = new ByteArrayInputStream(json.get().getBytes());
@@ -89,6 +87,27 @@ public class MapElasticResponseTest {
                 final String manifest = builder.build();
                 System.out.println(manifest);
             }
+        }
+    }
+
+    @Disabled
+    @Test
+    void generateManifestFromCamelAPI() throws URISyntaxException, IOException, InterruptedException {
+        final CrossFieldQuery cfq = new CrossFieldQuery();
+        cfq.setSize(100);
+        cfq.query = cfq.new Query();
+        cfq.query.multi_match = cfq.query.new MultiMatch();
+        cfq.query.multi_match.query = "1799 Sommerhalbjahr";
+
+        final Optional<String> json = serialize(cfq);
+        if (json.isPresent()) {
+            final InputStream is = new ByteArrayInputStream(json.get().getBytes());
+            final HttpClient client = getClient();
+            final HttpRequest req = HttpRequest.newBuilder(
+                    new URI("http://localhost:9090/generator")).headers(
+                    CONTENT_TYPE, "application/json").POST(fromInputStream(() -> is)).build();
+            final HttpResponse<String> response = client.send(req, asString());
+            System.out.println(response.body());
         }
     }
 }

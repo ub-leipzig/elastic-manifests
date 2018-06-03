@@ -185,7 +185,7 @@ public class ManifestBuilder extends AbstractSerializer {
             canvas.setHeight(height);
             canvas.setWidth(width);
             canvas.setImages(annotations);
-            canvas.setLabel(index.toString());
+            canvas.setLabel(String.format("%08d", index));
             canvases.add(canvas);
         });
         canvases.sort(Comparator.comparing(Canvas::getLabel));

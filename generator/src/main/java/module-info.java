@@ -17,5 +17,7 @@ module de.ubleipzig.elastic.manifests.generator {
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.databind;
     requires de.ubleipzig.iiif.vocabulary;
+    requires java.naming;
+    requires camel.core;
 
 }
