@@ -1,0 +1,2601 @@
+{
+  "took": 36,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 172,
+    "max_score": 4.4308167,
+    "hits": [
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "96050825-f44b-48ed-b577-5d145cc867ac",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000002.jpx",
+          "imageIndex": 2,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "80ce1b9f-9ef7-40f4-9ed3-d7cce2fe4533",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000003.jpx",
+          "imageIndex": 3,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "c9437ee4-5f1d-493d-9dba-1ded9ecc135b",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000004.jpx",
+          "imageIndex": 4,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "4798b3c5-7c04-4050-aae3-9f3849b83428",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000005.jpx",
+          "imageIndex": 5,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0002"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "ddce3ddf-bc4a-4188-90fc-18ea8b86ad2c",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000010.jpx",
+          "imageIndex": 10,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0004"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "cd40b208-1092-4030-919a-1d8a22094e9d",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000012.jpx",
+          "imageIndex": 12,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "60af136d-c25c-4068-8545-d96df59df8b8",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000014.jpx",
+          "imageIndex": 14,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "e070e88a-1c2a-4062-8059-a5028d1b6780",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000021.jpx",
+          "imageIndex": 21,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "aaba0e6a-1f51-4904-8f1b-7cea581734fc",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000023.jpx",
+          "imageIndex": 23,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "97720be0-7170-4295-ab28-206eef3b4346",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000039.jpx",
+          "imageIndex": 39,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5706da4f-aebb-446d-a60a-7abb25307813",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000050.jpx",
+          "imageIndex": 50,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "3494f294-1655-4c67-abdf-51a69a6edd67",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000055.jpx",
+          "imageIndex": 55,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5a3e3709-af55-4271-bb44-2df582c0df95",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000056.jpx",
+          "imageIndex": 56,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "b7792ec8-f76b-4a1f-8707-be6c939b53f6",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000057.jpx",
+          "imageIndex": 57,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007",
+            "2": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "1071bbe2-bcf4-4b78-9840-3947f2979cff",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000079.jpx",
+          "imageIndex": 79,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "dc63b433-3b0f-4552-bf8b-5acd72c13733",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000082.jpx",
+          "imageIndex": 82,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "54121e77-cd45-4d55-ab74-72311fbec990",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000083.jpx",
+          "imageIndex": 83,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "f9bf9fa9-a490-427a-a3d5-03232a79fef4",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000084.jpx",
+          "imageIndex": 84,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "07c7515e-14cf-4fbb-b334-ada07957095c",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000085.jpx",
+          "imageIndex": 85,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "81eaf3b8-eab3-44d5-9e1e-a5ab64bb5e8c",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000091.jpx",
+          "imageIndex": 91,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "771fa1ba-db6f-407c-b740-9c28fa9456e8",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000093.jpx",
+          "imageIndex": 93,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "0d10a641-a0bc-419c-94ed-e5519448bcb1",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000096.jpx",
+          "imageIndex": 96,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "dc683934-2ff3-4cb6-a640-175765139520",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000101.jpx",
+          "imageIndex": 101,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009",
+            "2": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "a53a534c-5050-4bf3-ab8a-8a8ff7d07c04",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000102.jpx",
+          "imageIndex": 102,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "6687b54f-5d9e-48d5-be6f-d1b13ddf5785",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000112.jpx",
+          "imageIndex": 112,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "6320fee3-2464-4355-8996-a45e530dd378",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000117.jpx",
+          "imageIndex": 117,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "a64a6c5a-fcc5-4e56-b50c-1d7c7b1af09d",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000118.jpx",
+          "imageIndex": 118,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "d5e7532c-5828-4448-9d85-07dbe93b2f65",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000127.jpx",
+          "imageIndex": 127,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "6171b5f1-4678-49e0-97a5-7612e6a856b5",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000133.jpx",
+          "imageIndex": 133,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "b7053f1e-3c47-4297-9cd8-e999c3ac1bb3",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000135.jpx",
+          "imageIndex": 135,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "b75f2ea1-a2b1-4b4f-8df8-849262993dde",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000138.jpx",
+          "imageIndex": 138,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "23d8f6e3-4b94-4157-ab88-79d9ec9e9d9e",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000139.jpx",
+          "imageIndex": 139,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "c3b81853-be20-4090-be33-3cd43b9519f5",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000143.jpx",
+          "imageIndex": 143,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5c3aa256-d2cd-4591-8de4-9f2ac2a75daa",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000144.jpx",
+          "imageIndex": 144,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "da409356-7188-4f8d-8a5d-4b3a481879ae",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000151.jpx",
+          "imageIndex": 151,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "36134e4f-70e2-45e0-a80c-7416fb255a95",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000157.jpx",
+          "imageIndex": 157,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0012"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "9cd25ea4-7b6f-4489-8d61-d158daf46b68",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000160.jpx",
+          "imageIndex": 160,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0012"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "79254b73-9085-4f63-8220-5c9501fbe633",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000162.jpx",
+          "imageIndex": 162,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0012"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "41168fe8-c52e-4c8b-ac97-3637feaacfbe",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000163.jpx",
+          "imageIndex": 163,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0012"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "4d52fe98-97c2-4d67-b855-f1537717bbab",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000165.jpx",
+          "imageIndex": 165,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0012"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "b55d4092-842d-49ab-a352-8f08355d2831",
+        "_score": 4.4308167,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000171.jpx",
+          "imageIndex": 171,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "c7a10e60-8aba-4d00-90e4-8be1776d9284",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000001.jpx",
+          "imageIndex": 1,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0001"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "764f01f5-369d-4075-98d5-e2aea4526849",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000006.jpx",
+          "imageIndex": 6,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "4fadaba9-3be2-4b44-a01b-769e7f609a1d",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000008.jpx",
+          "imageIndex": 8,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "1c44c7fb-2629-4c66-bde2-95e8e2d6c52c",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000009.jpx",
+          "imageIndex": 9,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0003"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "b0580173-4dcf-43ba-ac50-32dadb17f9ae",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000013.jpx",
+          "imageIndex": 13,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "777765e3-3bef-4f65-971e-808bf6caaa16",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000016.jpx",
+          "imageIndex": 16,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "62f6d4dc-d7f3-41a1-80ee-5dc69f1d0652",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000020.jpx",
+          "imageIndex": 20,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "7ad6a10e-1705-40da-8f5f-d74b0de43f0f",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000030.jpx",
+          "imageIndex": 30,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "8351141d-d45f-420a-ac16-f179cc8cbde7",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000040.jpx",
+          "imageIndex": 40,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5cd2cb09-b4a0-496b-a458-cdff563d2a3c",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000048.jpx",
+          "imageIndex": 48,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "cf5dd202-109c-4cfe-89c3-e7fcddb55db4",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000060.jpx",
+          "imageIndex": 60,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "2a66fc52-5050-4f24-9dc4-7639a6b0b3f8",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000061.jpx",
+          "imageIndex": 61,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "e449b81f-9165-4d54-968b-824a236e4000",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000065.jpx",
+          "imageIndex": 65,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "9ac6598d-f5b1-4962-b6ad-8f92ee2414b0",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000066.jpx",
+          "imageIndex": 66,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "cf31fb7d-939a-4200-8dca-f991a825cfd7",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000067.jpx",
+          "imageIndex": 67,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "44ca5d0a-8a52-4346-a5ca-e7df92eb095a",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000068.jpx",
+          "imageIndex": 68,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008",
+            "2": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "81c5e9e7-eab5-4a9d-ba5a-537798071c4b",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000071.jpx",
+          "imageIndex": 71,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "42771bef-6597-4fac-9ec5-f9f2f3adaa16",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000074.jpx",
+          "imageIndex": 74,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5f901bd8-2cdb-4340-9f2e-fe91f6d81dd9",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000078.jpx",
+          "imageIndex": 78,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "79d8ad9d-ed3c-484b-9171-34b3d010e9c4",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000080.jpx",
+          "imageIndex": 80,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "58a4e9bd-fb7d-4269-ae2c-1cc4b13ddc58",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000081.jpx",
+          "imageIndex": 81,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "f06ca1c6-fa8f-4498-99b9-30849054d4da",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000094.jpx",
+          "imageIndex": 94,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5050a2f6-70ab-411d-b591-4a1f0ce4b8f2",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000097.jpx",
+          "imageIndex": 97,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "9bdd7e93-1803-4973-ac04-ffb46b797f5b",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000105.jpx",
+          "imageIndex": 105,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "cc25c44b-d0dd-49da-8a5e-c669f9533522",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000106.jpx",
+          "imageIndex": 106,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "9e736312-b18c-4c04-ad90-cbac922164a8",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000114.jpx",
+          "imageIndex": 114,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "4e4512fb-f1da-4856-a22e-bb6c33a88c6c",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000124.jpx",
+          "imageIndex": 124,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "996b4971-e41e-4635-91fb-d91527845337",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000125.jpx",
+          "imageIndex": 125,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0010"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "f4de7dfa-8796-4909-8930-bd78f21ff848",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000130.jpx",
+          "imageIndex": 130,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "8d07b60b-5910-428c-a773-fceb7d5e3fd8",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000132.jpx",
+          "imageIndex": 132,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "14ea5e3a-d592-4934-83a8-7c644bfc40d3",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000145.jpx",
+          "imageIndex": 145,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "015d421c-b521-4a88-9c4d-84956199e85a",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000150.jpx",
+          "imageIndex": 150,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0011"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "2d4a7784-6a53-4218-9ec8-d6899dca0ad8",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000154.jpx",
+          "imageIndex": 154,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0012"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "0fd0dc5c-90d6-4dfe-a510-5f13380ed57a",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000158.jpx",
+          "imageIndex": 158,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0012"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "974b4605-f143-4bd8-b1c8-3b91c27b7f93",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000166.jpx",
+          "imageIndex": 166,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "2c39d5d7-f0d7-489f-8df1-aadbab366777",
+        "_score": 4.304065,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000170.jpx",
+          "imageIndex": 170,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "474642ac-471f-497d-b5f3-5effe663966c",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000007.jpx",
+          "imageIndex": 7,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {}
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "4bca9c66-cc3f-4647-a526-96adc50ad9ab",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000011.jpx",
+          "imageIndex": 11,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "17465480-d849-4ed5-8854-fdd9adb610ec",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000015.jpx",
+          "imageIndex": 15,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "3650e488-7401-4548-be7f-4032984f93d9",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000022.jpx",
+          "imageIndex": 22,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "db143dcf-60c1-468a-92bf-bc619bd445ef",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000024.jpx",
+          "imageIndex": 24,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "95b54ca1-a2a8-4bf1-b1d3-0b44a75b5340",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000029.jpx",
+          "imageIndex": 29,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5c085387-8b1f-4bea-92ee-e3b556150492",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000032.jpx",
+          "imageIndex": 32,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "056178ee-7915-4c54-90d1-f78bd238d38a",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000035.jpx",
+          "imageIndex": 35,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0005"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "5728f27c-9e86-4fa1-8db8-b013a14e68b3",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000038.jpx",
+          "imageIndex": 38,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "a2cb266c-93fb-47ae-887c-e5b848f58ca6",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000044.jpx",
+          "imageIndex": 44,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "1ac19e56-f657-4b2f-999b-0e05879a0f65",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000045.jpx",
+          "imageIndex": 45,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "f62034f7-075f-4f85-b568-afc1f5b9eeaf",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000049.jpx",
+          "imageIndex": 49,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0006"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "0810f85a-6978-4838-b5de-3daac6a6da92",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000059.jpx",
+          "imageIndex": 59,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "49b73aa4-16e9-40aa-946b-dd08b2e5a6ce",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000062.jpx",
+          "imageIndex": 62,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "3196ef42-d8f4-482f-9a36-2555b150f4b1",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000063.jpx",
+          "imageIndex": 63,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0007"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "216142f5-1d53-445d-89fd-5713ad1a03a0",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000072.jpx",
+          "imageIndex": 72,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "84fff0e6-1b1f-47fe-979b-970f9cf7a001",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000073.jpx",
+          "imageIndex": 73,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "32d8473a-382a-400c-8066-44d71663ab57",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000075.jpx",
+          "imageIndex": 75,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "525c98fa-a27c-44a9-ab08-db1b777a64e2",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000086.jpx",
+          "imageIndex": 86,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "f8710f26-635b-4ab2-98fc-6f7be68c9e2d",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000088.jpx",
+          "imageIndex": 88,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0008"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "2f6f47a4-8e7b-4a9e-9bed-7e3fc47cfd02",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000090.jpx",
+          "imageIndex": 90,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "c04e88fd-b985-4a2b-a322-f9108be05393",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000098.jpx",
+          "imageIndex": 98,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      },
+      {
+        "_index": "t3",
+        "_type": "_doc",
+        "_id": "14596090-f99f-4ba4-8699-15c6f373d647",
+        "_score": 4.276666,
+        "_source": {
+          "iiifService": "https://iiif.ub.uni-leipzig.de/iiif/j2k/0000/0098/0000009857/00000099.jpx",
+          "imageIndex": 99,
+          "metadata": {
+            "URN": "urn:nbn:de:bsz:15-0011-194180",
+            "Source PPN (SWB)": "04123491X",
+            "Owner": "Leipzig University Library",
+            "Physical description": "155 S.",
+            "Call number": "Kirchg.1328-oc",
+            "Place of publication": "Leipzig",
+            "Collection": "Leipziger Verlage",
+            "Author": "Kalthoff, Albert",
+            "Publisher": "Diederichs",
+            "Kitodo": "10187",
+            "Date of publication": "1904"
+          },
+          "structureMap": {
+            "1": "https://iiif.ub.uni-leipzig.de/0000009857/range/LOG_0009"
+          }
+        }
+      }
+    ]
+  }
+}

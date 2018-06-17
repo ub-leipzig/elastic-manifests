@@ -16,6 +16,7 @@ package de.ubleipzig.elastic.manifests.generator;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import de.ubleipzig.elastic.manifests.templates.AtomicElasticResponse;
 import de.ubleipzig.elastic.manifests.templates.ElasticResponse;
 import de.ubleipzig.elastic.manifests.templates.ImageServiceResponse;
 
@@ -39,6 +40,20 @@ public class Deserializer {
     public ElasticResponse mapElasticResponse(final InputStream is) {
         try {
             return MAPPER.readValue(is, new TypeReference<ElasticResponse>() {
+            });
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    /**
+     *
+     * @param is InputStream
+     * @return ElasticResponse
+     */
+    public AtomicElasticResponse mapAtomicElasticResponse(final InputStream is) {
+        try {
+            return MAPPER.readValue(is, new TypeReference<AtomicElasticResponse>() {
             });
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());

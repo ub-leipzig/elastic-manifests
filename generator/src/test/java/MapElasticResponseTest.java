@@ -17,6 +17,7 @@ import static javax.ws.rs.core.HttpHeaders.CONTENT_TYPE;
 import static jdk.incubator.http.HttpRequest.BodyPublisher.fromInputStream;
 import static jdk.incubator.http.HttpResponse.BodyHandler.asString;
 
+import de.ubleipzig.elastic.manifests.generator.AtomicManifestBuilder;
 import de.ubleipzig.elastic.manifests.generator.Deserializer;
 import de.ubleipzig.elastic.manifests.generator.ManifestBuilder;
 import de.ubleipzig.elastic.manifests.templates.CrossFieldQuery;
@@ -84,6 +85,32 @@ public class MapElasticResponseTest {
                 final String res = response.body();
                 final InputStream er = new ByteArrayInputStream(res.getBytes());
                 final ManifestBuilder builder = new ManifestBuilder(er);
+                final String manifest = builder.build();
+                System.out.println(manifest);
+            }
+        }
+    }
+
+    @Test
+    void generateAtomManifestFromCrossFieldResponse() throws URISyntaxException, IOException, InterruptedException {
+        final CrossFieldQuery cfq = new CrossFieldQuery();
+        cfq.setSize(200);
+        cfq.query = cfq.new Query();
+        cfq.query.multi_match = cfq.query.new MultiMatch();
+        cfq.query.multi_match.query = "0000009857";
+
+        final Optional<String> json = serialize(cfq);
+        if (json.isPresent()) {
+            final InputStream is = new ByteArrayInputStream(json.get().getBytes());
+            final HttpClient client = getClient();
+            final HttpRequest req = HttpRequest.newBuilder(
+                    new URI("http://localhost:9100/t3/_search")).headers(
+                    CONTENT_TYPE, "application/json").POST(fromInputStream(() -> is)).build();
+            final HttpResponse<String> response = client.send(req, asString());
+            if (response.statusCode() == 200) {
+                final String res = response.body();
+                final InputStream er = new ByteArrayInputStream(res.getBytes());
+                final AtomicManifestBuilder builder = new AtomicManifestBuilder(er);
                 final String manifest = builder.build();
                 System.out.println(manifest);
             }

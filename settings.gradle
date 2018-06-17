@@ -4,4 +4,3 @@ include ':templates'
 
 project(':generator').projectDir = "$rootDir/generator" as File
 project(':templates').projectDir = "$rootDir/templates" as File
-enableFeaturePreview('STABLE_PUBLISHING')
