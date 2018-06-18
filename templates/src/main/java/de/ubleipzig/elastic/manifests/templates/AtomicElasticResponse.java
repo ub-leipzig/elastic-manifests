@@ -118,7 +118,7 @@ public class AtomicElasticResponse {
         private Map<String, String> metadata;
 
         @JsonProperty
-        private Map<Integer, String> structureMap;
+        private Map<Integer, Structure> structureMap;
 
         /**
          * @return Integer
@@ -165,14 +165,14 @@ public class AtomicElasticResponse {
         /**
          * @return MetadataMap
          */
-        public Map<Integer, String> getStructureMap() {
+        public Map<Integer, Structure> getStructureMap() {
             return structureMap;
         }
 
         /**
          * @param structureMap structureMap
          */
-        public void setStructureMap(final Map<Integer, String> structureMap) {
+        public void setStructureMap(final Map<Integer, Structure> structureMap) {
             this.structureMap = structureMap;
         }
     }

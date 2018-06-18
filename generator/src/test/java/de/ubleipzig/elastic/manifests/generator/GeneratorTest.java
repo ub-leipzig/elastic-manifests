@@ -42,6 +42,8 @@ public final class GeneratorTest {
     private static final String HTTP_ACCEPT = "Accept";
     private static final String QUERY = "q";
     private static final String EMPTY = "empty";
+    private static final String TYPE = "type";
+    private static final String contentTypeJson = "application/json";
 
     private static final JedisConnectionFactory CONNECTION_FACTORY = new JedisConnectionFactory();
     private static RedisTemplate<String, String> redisTemplate;
@@ -104,15 +106,19 @@ public final class GeneratorTest {
                         .setHeader(HTTP_METHOD)
                         .constant("POST")
                         .setHeader(CONTENT_TYPE)
-                        .constant("application/json")
+                        .constant(contentTypeJson)
                         .process(e -> e.getIn().setBody(e.getIn().getBody()))
                         .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
                         .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
                         .setHeader(CONTENT_TYPE)
-                        .constant("application/json")
+                        .constant(contentTypeJson)
                         .convertBodyTo(String.class)
                         .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
-                        .to("direct:buildManifest");
+                        .choice()
+                        .when(header(TYPE).isEqualTo("jld"))
+                        .to("direct:buildManifest")
+                        .when(header(TYPE).isEqualTo("atomic"))
+                        .to("direct:buildAtomManifest");
                 from("direct:getQuery")
                         .routeId("getQuery")
                         .log(INFO, LOGGER, "Get Query from Elastic Search API")
@@ -124,14 +130,18 @@ public final class GeneratorTest {
                         .setHeader(HTTP_METHOD)
                         .constant("POST")
                         .setHeader(CONTENT_TYPE)
-                        .constant("application/json")
+                        .constant(contentTypeJson)
                         .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
                         .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
                         .setHeader(CONTENT_TYPE)
-                        .constant("application/json")
+                        .constant(contentTypeJson)
                         .convertBodyTo(String.class)
                         .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
-                        .to("direct:buildManifest");
+                        .choice()
+                        .when(header(TYPE).isEqualTo("jld"))
+                        .to("direct:buildManifest")
+                        .when(header(TYPE).isEqualTo("atomic"))
+                        .to("direct:buildAtomManifest");
                 from("direct:buildManifest").routeId("ManifestBuilder")
                         .setHeader(HTTP_CHARACTER_ENCODING)
                         .constant("UTF-8")
@@ -142,6 +152,19 @@ public final class GeneratorTest {
                             final String jsonResults = e.getIn().getBody().toString();
                             final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
                             final ManifestBuilder builder = new ManifestBuilder(is);
+                            e.getIn().setBody(builder.build());
+                        })
+                        .to("direct:redis-put");
+                from("direct:buildAtomManifest").routeId("AtomicManifestBuilder")
+                        .setHeader(HTTP_CHARACTER_ENCODING)
+                        .constant("UTF-8")
+                        .setHeader(CONTENT_TYPE)
+                        .constant("application/ld+json")
+                        .log(INFO, LOGGER, "Building Atomic Manifest")
+                        .process(e -> {
+                            final String jsonResults = e.getIn().getBody().toString();
+                            final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
+                            final AtomicManifestBuilder builder = new AtomicManifestBuilder(is);
                             e.getIn().setBody(builder.build());
                         })
                         .to("direct:redis-put");

@@ -29,7 +29,7 @@ import java.util.List;
  * @author christopher-johnson
  */
 @JsonInclude(Include.NON_NULL)
-@JsonPropertyOrder({"@context", "@id", "@type", "metadata", "attribution", "logo", "sequences", "service"})
+@JsonPropertyOrder({"@context", "@id", "@type", "label", "metadata", "attribution", "logo", "sequences", "service"})
 public class Manifest {
 
     @JsonProperty("@context")
@@ -40,6 +40,9 @@ public class Manifest {
 
     @JsonProperty("@type")
     private String type = SCEnum.Manifest.compactedIRI();
+
+    @JsonProperty("label")
+    private String label;
 
     @JsonProperty("attribution")
     private String attribution;
@@ -55,6 +58,9 @@ public class Manifest {
 
     @JsonProperty("metadata")
     private List<Metadata> metadata;
+
+    @JsonProperty("structures")
+    private List<Structure> structures;
 
     /**
      * Manifest.
@@ -84,6 +90,13 @@ public class Manifest {
     }
 
     /**
+     * @param label String
+     */
+    public void setLabel(final String label) {
+        this.label = label;
+    }
+
+    /**
      * @param attribution String
      */
     public void setAttribution(final String attribution) {
@@ -109,6 +122,13 @@ public class Manifest {
      */
     public void setSequences(final List<Sequence> sequences) {
         this.sequences = sequences;
+    }
+
+    /**
+     * @param structures List
+     */
+    public void setStructures(final List<Structure> structures) {
+        this.structures = structures;
     }
 
     /**

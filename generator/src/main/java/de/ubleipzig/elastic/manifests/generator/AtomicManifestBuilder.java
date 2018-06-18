@@ -24,31 +24,37 @@ import static de.ubleipzig.elastic.manifests.generator.Constants.trellisBodyBase
 import static de.ubleipzig.elastic.manifests.generator.Constants.trellisManifestBase;
 import static de.ubleipzig.elastic.manifests.generator.Constants.trellisSequenceBase;
 import static de.ubleipzig.elastic.manifests.generator.Constants.trellisTargetBase;
+import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.collectingAndThen;
+import static java.util.stream.Collectors.toCollection;
 
 import de.ubleipzig.elastic.manifests.templates.AtomicElasticResponse;
 import de.ubleipzig.elastic.manifests.templates.Body;
 import de.ubleipzig.elastic.manifests.templates.Canvas;
-import de.ubleipzig.elastic.manifests.templates.ElasticResponse;
-import de.ubleipzig.elastic.manifests.templates.Hits;
 import de.ubleipzig.elastic.manifests.templates.ImageServiceResponse;
 import de.ubleipzig.elastic.manifests.templates.Manifest;
 import de.ubleipzig.elastic.manifests.templates.Metadata;
-import de.ubleipzig.elastic.manifests.templates.MetadataMap;
 import de.ubleipzig.elastic.manifests.templates.PaintingAnnotation;
 import de.ubleipzig.elastic.manifests.templates.Sequence;
 import de.ubleipzig.elastic.manifests.templates.Service;
+import de.ubleipzig.elastic.manifests.templates.Structure;
 import de.ubleipzig.iiif.vocabulary.IIIFEnum;
 import de.ubleipzig.iiif.vocabulary.SC;
+import de.ubleipzig.iiif.vocabulary.SCEnum;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
+import java.util.TreeSet;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class AtomicManifestBuilder extends AbstractSerializer {
 
@@ -75,13 +81,20 @@ public class AtomicManifestBuilder extends AbstractSerializer {
     }
 
     /**
-     * @param metadata List
+     * @param metadata  List
      * @param sequences List
+     * @param structures List
      * @return Manifest
      */
-    public Manifest getManifest(final List<Sequence> sequences, final List<Metadata> metadata) {
+    public Manifest getManifest(final List<Sequence> sequences, final List<Metadata> metadata, final List<Structure>
+            structures) {
         final String id = trellisManifestBase + UUID.randomUUID();
+        final Optional<Metadata> titleObject = metadata.stream().filter(m -> m.getLabel().equals("Title")).findFirst();
         final Manifest manifest = new Manifest();
+        if (titleObject.isPresent()) {
+            final String title = titleObject.get().getValue();
+            manifest.setLabel(title);
+        }
         manifest.setContext(SC.CONTEXT);
         manifest.setId(id);
         manifest.setLogo(domainLogo);
@@ -93,6 +106,8 @@ public class AtomicManifestBuilder extends AbstractSerializer {
         service.setId(searchServiceId);
         service.setProfile(searchService);
         manifest.setService(service);
+        structures.sort(comparing(Structure::getStructureId));
+        manifest.setStructures(structures);
         return manifest;
     }
 
@@ -121,11 +136,15 @@ public class AtomicManifestBuilder extends AbstractSerializer {
         final AtomicElasticResponse response = deserializer.mapAtomicElasticResponse(body);
         final List<AtomicElasticResponse.Hits> hits = response.getHits().getHits();
         final List<Canvas> canvases = new ArrayList<>();
+        final Map<String, String> structuresMap = new HashMap<>();
+        final List<Structure> structureList = new ArrayList<>();
+
         if (!hits.isEmpty()) {
             final List<Metadata> md = buildMetadataFromFirstHit(hits.get(0).getSource().getMetadata());
             hits.forEach(h -> {
                 final Integer index = h.getSource().getImageIndex();
                 final String imageService = h.getSource().getIiifService();
+                final Map<Integer, Structure> structureMap = h.getSource().getStructureMap();
 
                 //getDimensionsFromImageService
                 InputStream is = null;
@@ -170,14 +189,45 @@ public class AtomicManifestBuilder extends AbstractSerializer {
                 canvas.setImages(annotations);
                 canvas.setLabel(String.format("%08d", index));
                 canvases.add(canvas);
+
+                //map canvas to structure
+                if (!structureMap.isEmpty()) {
+                    structuresMap.put(trellisTargetBase + index.toString(), structureMap.get(1).getStructureId());
+                    //create list of structures
+                    structureList.add(structureMap.get(1));
+                }
             });
-            canvases.sort(Comparator.comparing(Canvas::getLabel));
+            canvases.sort(comparing(Canvas::getLabel));
+
+            //build structures
+            final List<Structure> dedupStructures = structureList.stream().collect(
+                    collectingAndThen(toCollection(() -> new TreeSet<>(comparing(Structure::getStructureId))),
+                            ArrayList::new));
+            final List<Structure> structures = new ArrayList<>();
+            dedupStructures.forEach(s -> {
+                if (s != null) {
+                    final List<String> canvasesList = getKeysByValue(structuresMap, s.getStructureId());
+                    canvasesList.sort(Comparator.naturalOrder());
+                    final Structure structure = new Structure();
+                    structure.setStructureId(s.getStructureId());
+                    structure.setStructureLabel(s.getStructureLabel());
+                    structure.setCanvases(canvasesList);
+                    structure.setStructureType(SCEnum.Range.compactedIRI());
+                    structures.add(structure);
+                }
+            });
+
             final List<Sequence> sequences = getSequence(canvases);
-            final Manifest manifest = getManifest(sequences, md);
+            final Manifest manifest = getManifest(sequences, md, structures);
             final Optional<String> json = serialize(manifest);
             return json.orElse(null);
         } else {
             throw new RuntimeException("no hits for query, manifest builder process stopped");
         }
+    }
+
+    private static <T, V> List<T> getKeysByValue(final Map<T, V> map, final V value) {
+        return map.entrySet().stream().filter(entry -> Objects.equals(entry.getValue(), value)).map(
+                Map.Entry::getKey).collect(Collectors.toList());
     }
 }
