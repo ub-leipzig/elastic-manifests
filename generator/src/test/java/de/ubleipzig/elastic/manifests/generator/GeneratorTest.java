@@ -184,7 +184,7 @@ public final class GeneratorTest {
 
         camelContext.start();
 
-        Thread.sleep(5 * 60 * 1000);
+        Thread.sleep(60 * 60 * 1000);
 
         camelContext.stop();
 

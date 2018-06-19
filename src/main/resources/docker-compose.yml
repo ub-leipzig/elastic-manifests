@@ -54,6 +54,7 @@ services:
       - esnet
     volumes:
       - redis-data-volume:/data
+
 volumes:
   esdata1:
     driver: local

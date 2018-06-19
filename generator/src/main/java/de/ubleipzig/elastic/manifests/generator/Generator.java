@@ -52,7 +52,7 @@ public class Generator {
     private static final String TYPE = "type";
     private static final String contentTypeJson = "application/json";
     static {
-        CONNECTION_FACTORY.setHostName("localhost");
+        CONNECTION_FACTORY.setHostName("redis");
         CONNECTION_FACTORY.setPort(6379);
         CONNECTION_FACTORY.afterPropertiesSet();
     }
@@ -81,7 +81,7 @@ public class Generator {
         Objects.requireNonNull(registry)
                 .bind("redisTemplate", redisTemplate);
         //main.setPropertyPlaceholderLocations("file:${env:DYNAMO_HOME}/de.ubleipzig.dynamo.cfg");
-        main.setPropertyPlaceholderLocations("classpath:de.ubleipzig.elastic.manifests.generator.cfg");
+        main.setPropertyPlaceholderLocations("file:${env:GENERATOR_HOME}/de.ubleipzig.elastic.manifests.generator.cfg");
         main.run();
     }
 
@@ -153,7 +153,7 @@ public class Generator {
                     .choice()
                     .when(header(TYPE).isEqualTo("jld"))
                     .to("direct:buildManifest")
-                    .when(header(TYPE).isEqualTo("atoms"))
+                    .when(header(TYPE).isEqualTo("atomic"))
                     .to("direct:buildAtomManifest");
             from("direct:getQuery").routeId("getQuery")
                     .log(INFO, LOGGER, "Get Query from Elastic Search API")
@@ -175,13 +175,13 @@ public class Generator {
                     .choice()
                     .when(header(TYPE).isEqualTo("jld"))
                     .to("direct:buildManifest")
-                    .when(header(TYPE).isEqualTo("atoms"))
+                    .when(header(TYPE).isEqualTo("atomic"))
                     .to("direct:buildAtomManifest");
             from("direct:buildManifest").routeId("ManifestBuilder")
                     .setHeader(HTTP_CHARACTER_ENCODING)
                     .constant("UTF-8")
                     .setHeader(CONTENT_TYPE)
-                    .constant(contentTypeJson)
+                        .constant("application/ld+json")
                     .log(INFO, LOGGER, "Building Manifest")
                     .process(e -> {
                         final String jsonResults = e.getIn().getBody().toString();
@@ -194,7 +194,7 @@ public class Generator {
                     .setHeader(HTTP_CHARACTER_ENCODING)
                     .constant("UTF-8")
                     .setHeader(CONTENT_TYPE)
-                    .constant(contentTypeJson)
+                        .constant("application/ld+json")
                     .log(INFO, LOGGER, "Building Atomic Manifest")
                     .process(e -> {
                         final String jsonResults = e.getIn().getBody().toString();
