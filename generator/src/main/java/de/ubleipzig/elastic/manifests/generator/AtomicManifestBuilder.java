@@ -56,9 +56,13 @@ import java.util.TreeSet;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class AtomicManifestBuilder extends AbstractSerializer {
 
     private final InputStream body;
+    private static final Logger LOGGER = LoggerFactory.getLogger(AtomicManifestBuilder.class);
 
     /**
      * @param body String

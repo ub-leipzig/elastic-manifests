@@ -74,7 +74,7 @@ public final class GeneratorTest {
 
                 from("jetty:http://{{api.host}}:{{api.port}}{{api.prefix}}?" +
                         "optionsEnabled=true&matchOnUriPrefix=true&sendServerVersion=false" +
-                        "&httpMethodRestrict=GET,POST,OPTIONS")
+                        "&httpMethodRestrict=GET,HEAD,POST,OPTIONS")
                         .routeId("Generator")
                         .removeHeaders(HTTP_ACCEPT)
                         .setHeader("Access-Control-Allow-Origin")
@@ -143,10 +143,6 @@ public final class GeneratorTest {
                         .when(header(TYPE).isEqualTo("atomic"))
                         .to("direct:buildAtomManifest");
                 from("direct:buildManifest").routeId("ManifestBuilder")
-                        .setHeader(HTTP_CHARACTER_ENCODING)
-                        .constant("UTF-8")
-                        .setHeader(CONTENT_TYPE)
-                        .constant("application/ld+json")
                         .log(INFO, LOGGER, "Building Manifest")
                         .process(e -> {
                             final String jsonResults = e.getIn().getBody().toString();
@@ -154,19 +150,24 @@ public final class GeneratorTest {
                             final ManifestBuilder builder = new ManifestBuilder(is);
                             e.getIn().setBody(builder.build());
                         })
-                        .to("direct:redis-put");
-                from("direct:buildAtomManifest").routeId("AtomicManifestBuilder")
+                        .setHeader(CONTENT_TYPE)
+                        .constant(contentTypeJson)
                         .setHeader(HTTP_CHARACTER_ENCODING)
                         .constant("UTF-8")
-                        .setHeader(CONTENT_TYPE)
-                        .constant("application/ld+json")
+                        .to("direct:redis-put");
+                from("direct:buildAtomManifest").routeId("AtomicManifestBuilder")
                         .log(INFO, LOGGER, "Building Atomic Manifest")
                         .process(e -> {
                             final String jsonResults = e.getIn().getBody().toString();
+                            LOGGER.info("Json Result is {}", jsonResults);
                             final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
                             final AtomicManifestBuilder builder = new AtomicManifestBuilder(is);
                             e.getIn().setBody(builder.build());
                         })
+                        .setHeader(CONTENT_TYPE)
+                        .constant(contentTypeJson)
+                        .setHeader(HTTP_CHARACTER_ENCODING)
+                        .constant("UTF-8")
                         .to("direct:redis-put");
                 from("direct:redis-put")
                         .routeId("RedisPut")
