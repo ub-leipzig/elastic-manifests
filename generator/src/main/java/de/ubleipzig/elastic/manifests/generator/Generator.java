@@ -16,7 +16,6 @@ package de.ubleipzig.elastic.manifests.generator;
 
 import static de.ubleipzig.elastic.manifests.generator.ContextUtils.createInitialContext;
 import static org.apache.camel.Exchange.CONTENT_TYPE;
-import static org.apache.camel.Exchange.HTTP_CHARACTER_ENCODING;
 import static org.apache.camel.Exchange.HTTP_METHOD;
 import static org.apache.camel.Exchange.HTTP_RESPONSE_CODE;
 import static org.apache.camel.LoggingLevel.INFO;
@@ -80,7 +79,7 @@ public class Generator {
         redisTemplate.afterPropertiesSet();
         Objects.requireNonNull(registry)
                 .bind("redisTemplate", redisTemplate);
-        //main.setPropertyPlaceholderLocations("file:${env:DYNAMO_HOME}/de.ubleipzig.dynamo.cfg");
+        //main.setPropertyPlaceholderLocations("classpath:de.ubleipzig.elastic.manifests.generator.cfg");
         main.setPropertyPlaceholderLocations("file:${env:GENERATOR_HOME}/de.ubleipzig.elastic.manifests.generator.cfg");
         main.run();
     }
@@ -128,6 +127,7 @@ public class Generator {
                                 .toString();
                         if (redisTemplate.opsForValue().get(httpquery) != null) {
                             e.getIn().setBody(redisTemplate.opsForValue().get(httpquery));
+                            e.getIn().setHeader(CONTENT_TYPE, contentTypeJson);
                             LOGGER.info("Getting query result from Redis Cache");
                         } else {
                             e.getIn().setHeader(CONTENT_TYPE, EMPTY);
@@ -146,9 +146,7 @@ public class Generator {
                     .process(e -> e.getIn().setBody(e.getIn().getBody()))
                     .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
                     .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
-                    .setHeader(CONTENT_TYPE)
-                    .constant(contentTypeJson)
-                    .convertBodyTo(String.class)
+                    .convertBodyTo(InputStream.class)
                     .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
                     .choice()
                     .when(header(TYPE).isEqualTo("jld"))
@@ -168,9 +166,7 @@ public class Generator {
                     .constant(contentTypeJson)
                     .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
                     .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
-                    .setHeader(CONTENT_TYPE)
-                    .constant(contentTypeJson)
-                    .convertBodyTo(String.class)
+                    .convertBodyTo(InputStream.class)
                     .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
                     .choice()
                     .when(header(TYPE).isEqualTo("jld"))
@@ -178,30 +174,24 @@ public class Generator {
                     .when(header(TYPE).isEqualTo("atomic"))
                     .to("direct:buildAtomManifest");
             from("direct:buildManifest").routeId("ManifestBuilder")
-                    .setHeader(HTTP_CHARACTER_ENCODING)
-                    .constant("UTF-8")
-                    .setHeader(CONTENT_TYPE)
-                        .constant("application/ld+json")
                     .log(INFO, LOGGER, "Building Manifest")
                     .process(e -> {
-                        final String jsonResults = e.getIn().getBody().toString();
-                        final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
+                        final InputStream is = e.getIn().getBody(InputStream.class);
                         final ManifestBuilder builder = new ManifestBuilder(is);
                         e.getIn().setBody(builder.build());
                     })
+                    .setHeader(CONTENT_TYPE)
+                    .constant(contentTypeJson)
                     .to("direct:redis-put");
             from("direct:buildAtomManifest").routeId("AtomicManifestBuilder")
-                    .setHeader(HTTP_CHARACTER_ENCODING)
-                    .constant("UTF-8")
-                    .setHeader(CONTENT_TYPE)
-                        .constant("application/ld+json")
                     .log(INFO, LOGGER, "Building Atomic Manifest")
                     .process(e -> {
-                        final String jsonResults = e.getIn().getBody().toString();
-                        final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
+                        final InputStream is = e.getIn().getBody(InputStream.class);
                         final AtomicManifestBuilder builder = new AtomicManifestBuilder(is);
                         e.getIn().setBody(builder.build());
                     })
+                    .setHeader(CONTENT_TYPE)
+                    .constant(contentTypeJson)
                     .to("direct:redis-put");
             from("direct:redis-put").routeId("RedisPut")
                     .log(INFO, LOGGER, "Storing query result in Redis Cache")
