@@ -62,6 +62,20 @@ public class Deserializer {
 
     /**
      *
+     * @param res String
+     * @return ImageServiceResponse
+     */
+    public ImageServiceResponse mapServiceResponse(final String res) {
+        try {
+            return MAPPER.readValue(res, new TypeReference<ImageServiceResponse>() {
+            });
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    /**
+     *
      * @param is InputStream
      * @return ImageServiceResponse
      */

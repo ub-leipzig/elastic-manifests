@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import de.ubleipzig.iiif.vocabulary.SC;
+import de.ubleipzig.iiif.vocabulary.SCEnum;
 
 import java.util.List;
 
@@ -44,7 +44,7 @@ public class PaintingAnnotation {
     private String type = Annotation.getIRIString();
 
     @JsonProperty
-    private String motivation = SC.painting.getIRIString();
+    private String motivation = SCEnum.painting.compactedIRI();
 
     @JsonProperty
     private Body resource;

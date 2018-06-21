@@ -15,9 +15,11 @@
 package de.ubleipzig.elastic.manifests.generator;
 
 import static de.ubleipzig.elastic.manifests.generator.ContextUtils.createInitialContext;
+import static java.io.File.separator;
 import static org.apache.camel.Exchange.CONTENT_TYPE;
 import static org.apache.camel.Exchange.HTTP_CHARACTER_ENCODING;
 import static org.apache.camel.Exchange.HTTP_METHOD;
+import static org.apache.camel.Exchange.HTTP_PATH;
 import static org.apache.camel.Exchange.HTTP_RESPONSE_CODE;
 import static org.apache.camel.LoggingLevel.INFO;
 
@@ -43,6 +45,7 @@ public final class GeneratorTest {
     private static final String QUERY = "q";
     private static final String EMPTY = "empty";
     private static final String TYPE = "type";
+    private static final String INDEX = "index";
     private static final String contentTypeJson = "application/json";
 
     private static final JedisConnectionFactory CONNECTION_FACTORY = new JedisConnectionFactory();
@@ -108,6 +111,7 @@ public final class GeneratorTest {
                         .setHeader(CONTENT_TYPE)
                         .constant(contentTypeJson)
                         .process(e -> e.getIn().setBody(e.getIn().getBody()))
+                        .setHeader(HTTP_PATH, simple(separator + "${header.index}" + separator + "_search") )
                         .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
                         .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
                         .setHeader(CONTENT_TYPE)
@@ -115,7 +119,7 @@ public final class GeneratorTest {
                         .convertBodyTo(String.class)
                         .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
                         .choice()
-                        .when(header(TYPE).isEqualTo("jld"))
+                        .when(header(TYPE).isEqualTo("orp"))
                         .to("direct:buildManifest")
                         .when(header(TYPE).isEqualTo("atomic"))
                         .to("direct:buildAtomManifest");
@@ -127,6 +131,7 @@ public final class GeneratorTest {
                             e.getIn().setBody(query);
                         })
                         .removeHeaders("Camel*")
+                        .setHeader(HTTP_PATH, simple(separator + "${header.index}" + separator + "_search") )
                         .setHeader(HTTP_METHOD)
                         .constant("POST")
                         .setHeader(CONTENT_TYPE)
@@ -138,7 +143,7 @@ public final class GeneratorTest {
                         .convertBodyTo(String.class)
                         .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
                         .choice()
-                        .when(header(TYPE).isEqualTo("jld"))
+                        .when(header(TYPE).isEqualTo("orp"))
                         .to("direct:buildManifest")
                         .when(header(TYPE).isEqualTo("atomic"))
                         .to("direct:buildAtomManifest");

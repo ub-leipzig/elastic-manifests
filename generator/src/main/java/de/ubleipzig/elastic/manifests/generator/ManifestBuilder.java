@@ -24,6 +24,7 @@ import static de.ubleipzig.elastic.manifests.generator.Constants.trellisBodyBase
 import static de.ubleipzig.elastic.manifests.generator.Constants.trellisManifestBase;
 import static de.ubleipzig.elastic.manifests.generator.Constants.trellisSequenceBase;
 import static de.ubleipzig.elastic.manifests.generator.Constants.trellisTargetBase;
+import static java.util.Optional.ofNullable;
 
 import de.ubleipzig.elastic.manifests.templates.Body;
 import de.ubleipzig.elastic.manifests.templates.Canvas;
@@ -41,6 +42,7 @@ import de.ubleipzig.iiif.vocabulary.SC;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -48,9 +50,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ManifestBuilder extends AbstractSerializer {
 
     private final InputStream body;
+    private static final Logger LOGGER = LoggerFactory.getLogger(Generator.class);
 
     /**
      * @param body String
@@ -73,7 +79,7 @@ public class ManifestBuilder extends AbstractSerializer {
     }
 
     /**
-     * @param metadata List
+     * @param metadata  List
      * @param sequences List
      * @return Manifest
      */
@@ -143,51 +149,57 @@ public class ManifestBuilder extends AbstractSerializer {
             final List<Metadata> md = buildMetadataFromFirstHit(hits.get(0).getSource().getMetadataMap());
             hits.forEach(h -> {
                 final Integer index = h.getSource().getImageIndex();
-                final String imageService = h.getSource().getImageServiceIRI();
+                final Optional<String> imageService = ofNullable(h.getSource().getImageServiceIRI());
+                if (imageService.isPresent()) {
+                    //getDimensionsFromImageService
+                    InputStream is = null;
+                    try {
+                        final URL url = new URL(imageService.get());
+                        final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                        connection.connect();
+                        final int code = connection.getResponseCode();
+                        if (code == 200) {
+                            is = connection.getInputStream();
+                        }
+                    } catch (IOException e) {
+                        throw new RuntimeException(e.getMessage());
+                    }
+                    final ImageServiceResponse ir = deserializer.mapServiceResponse(is);
+                    final Integer height = ir.getHeight();
+                    final Integer width = ir.getWidth();
 
-                //getDimensionsFromImageService
-                InputStream is = null;
-                try {
-                    is = new URL(imageService).openStream();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    //createServiceObject
+                    final Service service = new Service();
+                    service.setContext(IIIFEnum.IMAGE_CONTEXT.IRIString());
+                    service.setProfile(IIIFEnum.SERVICE_PROFILE.IRIString());
+                    service.setId(imageService.get());
+                    //createBody
+                    final Body body = new Body();
+                    body.setService(service);
+                    body.setResourceHeight(height);
+                    body.setResourceWidth(width);
+                    body.setResourceType("dctypes:Image");
+                    body.setResourceFormat("image/jpeg");
+                    body.setResourceId(trellisBodyBase + index + ".jpg");
+
+                    //createAnnotation
+                    final List<PaintingAnnotation> annotations = new ArrayList<>();
+                    final PaintingAnnotation anno = new PaintingAnnotation();
+                    final String annoId = trellisAnnotationBase + UUID.randomUUID();
+                    anno.setId(annoId);
+                    anno.setBody(body);
+                    anno.setTarget(trellisTargetBase + index.toString());
+                    annotations.add(anno);
+
+                    //createCanvas
+                    final Canvas canvas = new Canvas();
+                    canvas.setId(trellisTargetBase + index.toString());
+                    canvas.setHeight(height);
+                    canvas.setWidth(width);
+                    canvas.setImages(annotations);
+                    canvas.setLabel(String.format("%08d", index));
+                    canvases.add(canvas);
                 }
-                final ImageServiceResponse ir = deserializer.mapServiceResponse(is);
-                final Integer height = ir.getHeight();
-                final Integer width = ir.getWidth();
-
-                //createServiceObject
-                final Service service = new Service();
-                service.setContext(IIIFEnum.IMAGE_CONTEXT.IRIString());
-                service.setProfile(IIIFEnum.SERVICE_PROFILE.IRIString());
-                service.setId(imageService);
-
-                //createBody
-                final Body body = new Body();
-                body.setService(service);
-                body.setResourceHeight(height);
-                body.setResourceWidth(width);
-                body.setResourceType("dctypes:Image");
-                body.setResourceFormat("image/jpeg");
-                body.setResourceId(trellisBodyBase + index + ".jpg");
-
-                //createAnnotation
-                final List<PaintingAnnotation> annotations = new ArrayList<>();
-                final PaintingAnnotation anno = new PaintingAnnotation();
-                final String annoId = trellisAnnotationBase + UUID.randomUUID();
-                anno.setId(annoId);
-                anno.setBody(body);
-                anno.setTarget(trellisTargetBase + index.toString());
-                annotations.add(anno);
-
-                //createCanvas
-                final Canvas canvas = new Canvas();
-                canvas.setId(trellisTargetBase + index.toString());
-                canvas.setHeight(height);
-                canvas.setWidth(width);
-                canvas.setImages(annotations);
-                canvas.setLabel(String.format("%08d", index));
-                canvases.add(canvas);
             });
             canvases.sort(Comparator.comparing(Canvas::getLabel));
             final List<Sequence> sequences = getSequence(canvases);

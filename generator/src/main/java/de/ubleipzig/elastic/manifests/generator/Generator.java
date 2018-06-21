@@ -15,12 +15,13 @@
 package de.ubleipzig.elastic.manifests.generator;
 
 import static de.ubleipzig.elastic.manifests.generator.ContextUtils.createInitialContext;
+import static java.io.File.separator;
 import static org.apache.camel.Exchange.CONTENT_TYPE;
 import static org.apache.camel.Exchange.HTTP_METHOD;
+import static org.apache.camel.Exchange.HTTP_PATH;
 import static org.apache.camel.Exchange.HTTP_RESPONSE_CODE;
 import static org.apache.camel.LoggingLevel.INFO;
 
-import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Objects;
 
@@ -144,14 +145,13 @@ public class Generator {
                     .setHeader(CONTENT_TYPE)
                     .constant(contentTypeJson)
                     .process(e -> e.getIn().setBody(e.getIn().getBody()))
+                    .setHeader(HTTP_PATH, simple(separator + "${header.index}" + separator + "_search") )
                     .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
                     .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
-                    .setHeader(CONTENT_TYPE)
-                    .constant(contentTypeJson)
-                    .convertBodyTo(String.class)
+                    .convertBodyTo(InputStream.class)
                     .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
                     .choice()
-                    .when(header(TYPE).isEqualTo("jld"))
+                    .when(header(TYPE).isEqualTo("orp"))
                     .to("direct:buildManifest")
                     .when(header(TYPE).isEqualTo("atomic"))
                     .to("direct:buildAtomManifest");
@@ -162,26 +162,24 @@ public class Generator {
                         e.getIn().setBody(query);
                     })
                     .removeHeaders("Camel*")
+                    .setHeader(HTTP_PATH, simple(separator + "${header.index}" + separator + "_search") )
                     .setHeader(HTTP_METHOD)
                     .constant("POST")
                     .setHeader(CONTENT_TYPE)
                     .constant(contentTypeJson)
                     .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
                     .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
-                    .setHeader(CONTENT_TYPE)
-                    .constant(contentTypeJson)
-                    .convertBodyTo(String.class)
+                    .convertBodyTo(InputStream.class)
                     .log(INFO, LOGGER, "Building JSON-LD Manifest from Query Results")
                     .choice()
-                    .when(header(TYPE).isEqualTo("jld"))
+                    .when(header(TYPE).isEqualTo("orp"))
                     .to("direct:buildManifest")
                     .when(header(TYPE).isEqualTo("atomic"))
                     .to("direct:buildAtomManifest");
             from("direct:buildManifest").routeId("ManifestBuilder")
                     .log(INFO, LOGGER, "Building Manifest")
                     .process(e -> {
-                        final String jsonResults = e.getIn().getBody().toString();
-                        final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
+                        final InputStream is = e.getIn().getBody(InputStream.class);
                         final ManifestBuilder builder = new ManifestBuilder(is);
                         e.getIn().setBody(builder.build());
                     })
@@ -191,9 +189,7 @@ public class Generator {
             from("direct:buildAtomManifest").routeId("AtomicManifestBuilder")
                     .log(INFO, LOGGER, "Building Atomic Manifest")
                     .process(e -> {
-                        final String jsonResults = e.getIn().getBody().toString();
-                        LOGGER.info("Json Result is {}", jsonResults);
-                        final InputStream is = new ByteArrayInputStream(jsonResults.getBytes());
+                        final InputStream is = e.getIn().getBody(InputStream.class);
                         final AtomicManifestBuilder builder = new AtomicManifestBuilder(is);
                         e.getIn().setBody(builder.build());
                     })

@@ -39,7 +39,7 @@ The Camel Jetty API accepts the elastic search standard query object in a GET or
 Example:
 
 ```
-GET http://localhost:9090/generator?q=${JSON_QUERY}
+GET http://localhost:9090/generator?type=orp&index=vp4&q=${JSON_QUERY}
 ```
 
 ```json
@@ -58,5 +58,5 @@ GET http://localhost:9090/generator?q=${JSON_QUERY}
 OR
 
 ```
-POST http://localhost:9090/generator
+POST http://localhost:9090/generator?type=orp&index=vp4
 ```
