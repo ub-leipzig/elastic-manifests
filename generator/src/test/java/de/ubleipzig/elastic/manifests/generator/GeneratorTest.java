@@ -45,7 +45,6 @@ public final class GeneratorTest {
     private static final String QUERY = "q";
     private static final String EMPTY = "empty";
     private static final String TYPE = "type";
-    private static final String INDEX = "index";
     private static final String contentTypeJson = "application/json";
 
     private static final JedisConnectionFactory CONNECTION_FACTORY = new JedisConnectionFactory();
@@ -53,7 +52,7 @@ public final class GeneratorTest {
 
     static {
         CONNECTION_FACTORY.setHostName("localhost");
-        CONNECTION_FACTORY.setPort(6379);
+        CONNECTION_FACTORY.setPort(6370);
         CONNECTION_FACTORY.afterPropertiesSet();
         redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(CONNECTION_FACTORY);
@@ -127,8 +126,8 @@ public final class GeneratorTest {
                         .routeId("getQuery")
                         .log(INFO, LOGGER, "Get Query from Elastic Search API")
                         .process(e -> {
-                            final String query = e.getIn().getHeader(QUERY).toString();
-                            e.getIn().setBody(query);
+                            e.getIn().setBody(e.getIn().getHeader(QUERY), InputStream.class);
+                            //LOGGER.info("query body is {}", query);
                         })
                         .removeHeaders("Camel*")
                         .setHeader(HTTP_PATH, simple(separator + "${header.index}" + separator + "_search") )
@@ -137,6 +136,7 @@ public final class GeneratorTest {
                         .setHeader(CONTENT_TYPE)
                         .constant(contentTypeJson)
                         .to("http4:{{elasticsearch.baseUrl}}?useSystemProperties=true&bridgeEndpoint=true")
+                        .log(INFO, LOGGER, "Headers: ${headers}" )
                         .filter(header(HTTP_RESPONSE_CODE).isEqualTo(200))
                         .setHeader(CONTENT_TYPE)
                         .constant(contentTypeJson)

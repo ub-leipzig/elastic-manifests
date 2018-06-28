@@ -158,8 +158,7 @@ public class Generator {
             from("direct:getQuery").routeId("getQuery")
                     .log(INFO, LOGGER, "Get Query from Elastic Search API")
                     .process(e -> {
-                        final String query = e.getIn().getHeader(QUERY).toString();
-                        e.getIn().setBody(query);
+                        e.getIn().setBody(e.getIn().getHeader(QUERY), InputStream.class);
                     })
                     .removeHeaders("Camel*")
                     .setHeader(HTTP_PATH, simple(separator + "${header.index}" + separator + "_search") )
