@@ -4,57 +4,68 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.2.2
     container_name: elasticsearch
+    restart: always
     environment:
-      - cluster.name=docker-cluster
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - xpack.security.enabled=false
+    - cluster.name=docker-cluster
+    - bootstrap.memory_lock=true
+    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    - xpack.security.enabled=false
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
-      - esdata1:/usr/share/elasticsearch/data
-      - ./cfg/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    - esdata1:/usr/share/elasticsearch/data
+    - ./cfg/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     ports:
-      - 9100:9200
+    - 9100:9200
     networks:
-      - esnet
-    restart: always
+      esnet:
+        aliases:
+        - es.iiif.cloud
+
   elasticsearch2:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.2.2
     container_name: elasticsearch2
     environment:
-      - cluster.name=docker-cluster
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - "discovery.zen.ping.unicast.hosts=elasticsearch"
-      - xpack.security.enabled=false
+    - cluster.name=docker-cluster
+    - bootstrap.memory_lock=true
+    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    - "discovery.zen.ping.unicast.hosts=elasticsearch"
+    - xpack.security.enabled=false
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
-      - esdata2:/usr/share/elasticsearch/data
+    - esdata2:/usr/share/elasticsearch/data
     networks:
-      - esnet
+      esnet:
+        aliases:
+        - es.iiif.cloud
+
   kibana:
     image: docker.elastic.co/kibana/kibana:6.2.2
+    container_name: kibana
     ports:
-      - 5601:5601
+    - 5601:5601
     networks:
-      - esnet
+      esnet:
+        aliases:
+        - es.iiif.cloud
     restart: always
   redis:
     image: ubleipzig/redis:latest
-    ports:
-      - 6370:6379
     container_name: redis
+    ports:
+    - 6379
     networks:
-      - esnet
+      esnet:
+        aliases:
+        - es.iiif.cloud
     volumes:
-      - redis-data-volume:/data
-
+    - redis-data-volume:/data
+    - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
 volumes:
   esdata1:
     driver: local

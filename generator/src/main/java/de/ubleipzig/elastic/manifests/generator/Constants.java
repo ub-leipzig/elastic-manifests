@@ -18,9 +18,8 @@ package de.ubleipzig.elastic.manifests.generator;
  * Constants.
  */
 public final class Constants {
-    static String dynamoBase = "http://workspaces.ub.uni-leipzig.de:9095/dynamo?type=meta&v1=";
     public static String domainAttribution = "Provided by Leipzig University";
-    public static String domainLogo = "http://iiif.ub.uni-leipzig.de/ubl-logo.png";
+    public static String domainLogo = "https://iiif.ub.uni-leipzig.de/ubl-logo.png";
     static String trellisCollectionBase = "trellis:data/collection/vp/";
     static String trellisManifestBase = "trellis:data/collection/vp/manifest/";
     static String trellisSequenceBase = "trellis:data/collection/vp/sequence/";
